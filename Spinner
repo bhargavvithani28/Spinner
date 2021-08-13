@@ -1,0 +1,26 @@
+-----------------  XML File --------------------
+
+<Spinner
+android:id="@+id/spinner_forma_pago"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content" />
+
+
+
+-----------------  JAVA File --------------------
+
+ArrayAdapter ad = new ArrayAdapter(context, android.R.layout.simple_spinner_item, ARR_NAME);
+        ad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        SPIN_NAME.setAdapter(ad);
+
+        SPIN_NAME.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parentView,
+                                       View selectedItemView, int positionSpin, long id) {
+
+                //  code
+
+            }
+
+            public void onNothingSelected(AdapterView<?> arg0) {// do nothing
+            }
+        });
